@@ -7,6 +7,8 @@ fn main() {
         std::io::stdin()
             .read_line(&mut input)
             .expect("未检测到输入...");
+
+        // 将输入的文本转为整数类型，使用match处理输入非整数的情况
         let input: i32 = match input.trim().parse() {
             Ok(input) => input,
             Err(_) => continue,
