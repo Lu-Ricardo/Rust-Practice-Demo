@@ -17,6 +17,10 @@ fn main() {
         n3, n4, n5
     ); //按照对应进制(16, 2, 8)输出
 
+    let str = String::from("Hello World");
+    // 截取字符串并输出
+    println!("{str}, {}", &str[0..=5]);
+
     let tuple: (&str, i8, i64) = ("Ricardo", 18, 12345678910);
     //提取元组中对应的值
     let (name, age, tel) = tuple;
