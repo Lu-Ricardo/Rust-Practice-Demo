@@ -9,13 +9,17 @@ fn main() {
     println!("a + num_five = {}", add(a, num_five()));
 
     let mut sum = 0;
+    //无限循环
     let ten = loop {
         sum += 1;
         if sum == 10 {
+            // 跟在break后可作为返回值
             break sum;
         }
     };
     println!("{ten}");
+
+    loop_fun();
 }
 
 fn num_five() -> i32 {
@@ -26,4 +30,29 @@ fn num_five() -> i32 {
 //带参数的函数
 fn add(a: i32, b: i32) -> i32 {
     a + b
+}
+
+fn loop_fun() {
+    let mut id = 0;
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    // loop 无限循环
+    loop {
+        println!("[{}] In loop", arr[id]);
+        id += 1;
+        if id == 10 {
+            break;
+        }
+    }
+
+    // 有条件循环
+    id = 0;
+    while id < 10 {
+        println!("[{}] In while", arr[id]);
+        id += 1;
+    }
+
+    // 迭代循环
+    for i in 0..10 {
+        println!("[{}] In for", arr[i]);
+    }
 }
