@@ -11,3 +11,6 @@ Rust入门练习项目
 
 ## Date_Type
 - 数据类型
+
+## Struct
+- 结构体
