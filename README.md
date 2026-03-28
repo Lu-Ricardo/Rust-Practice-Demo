@@ -18,3 +18,8 @@ Rust入门练习项目
 ## Enum_and_match
 - 枚举和匹配
 - if let与let else流程控制语句
+
+## Vector
+- Vector向量
+- String
+- HashMap
