@@ -98,6 +98,7 @@ fn sort_and_statistics(vec: &mut Vec<i32>) {
     let mut max_value = 0;
 
     for (m, n) in map.iter() {
+        //因为m,n实际上是引用类型，其值为迭代器中对应数值的地址。而max_count是i32类型，无法直接进行运算所以需要*解引用
         if *n > max_count {
             max_count = *n;
             max_value = *m;
